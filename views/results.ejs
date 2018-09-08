@@ -1,0 +1,36 @@
+<%include partials/header%>
+
+<div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Results are :-</h1>
+    </div>
+    
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Release Year</th>
+          <th scope="col">Movie Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">IMDB Id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data["Search"].forEach(function(movie){%>
+            <tr>
+                <th scope="row"><%= movie["Year"]%></th>
+                <td><%= movie["Title"]%></td>
+                <td><%= movie["Type"]%></td>
+                <td><%= movie["imdbID"]%></td>
+            </tr>
+        <%});%>
+      </tbody>
+    </table>
+    
+    
+    <a href="/">Search again</a>
+    
+</div>
+
+
+
+<%include partials/footer%>

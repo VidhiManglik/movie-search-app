@@ -1,0 +1,29 @@
+<%include partials/header%>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Movie Search :)</h1>
+    <p class="lead">Search Your Favourite Movie and All the info Related to it.</p>
+  </div>
+</div>
+
+
+<form class="form-inline container" action='/results' method='get'>
+    <div class="col-sm-6 my-1">
+      <label class="sr-only" for="inlineFormInputGroup">Movie-name</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Find Movie</div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" name="search" placeholder="Type Any phrase related to your search!">
+      </div>
+    </div>
+    
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-secondary">Search</button>
+    </div>
+  
+</form>
+
+
+<%include partials/footer%>
